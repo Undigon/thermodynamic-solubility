@@ -11,8 +11,8 @@ int main (){
 	long double conc = 0.01;
 	long double kPS = 0.0;
 	long double s_i_ans = 0.1; //set to 1,76e-4 if all else fails
-	printf ("Se requiere de dos valores: La concentración actual\n de la solución y ");
-	printf ("la constante de solubilidad termodinámica del soluto.\n");
+	printf ("Se requiere de dos valores: La concentración actual\n
+		de la solución y la constante de solubilidad termodinámica del soluto.\n");
 	scanf ("%Le", &conc);
 	//printf ("%Le\n", conc); //Just debug things
 	scanf ("%Le", &kPS);
