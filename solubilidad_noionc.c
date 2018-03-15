@@ -14,9 +14,9 @@ int main (){
 	printf ("Se requiere de dos valores: La concentración actual\n de la solución y ");
 	printf ("la constante de solubilidad termodinámica del soluto.\n");
 	scanf ("%Le", &conc);
-	printf ("%Le\n", conc);
+	//printf ("%Le\n", conc); //Just debug things
 	scanf ("%Le", &kPS);
-	printf ("%Le\n", kPS);
+	//printf ("%Le\n", kPS); //Just debug things
 	kPS = sqrt(kPS);
 	for (int i = 0; i < 5; i++){
 		s_i_ans = kPS / pow(10, -0.51*sqrt(s_i_ans + conc));
