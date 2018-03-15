@@ -1,7 +1,7 @@
 /*Este algoritmo emplea el método*
- *de la fuerza ionica media y    *
- *está específicamente diseñado  *
- *para sales 1+1 sin ion común   */
+ *de la actividad media y está   *
+ *específicamente diseñado para  *
+ *   sales 1+1 sin ion común     */
 
 #include <stdio.h>
 #include <math.h>
