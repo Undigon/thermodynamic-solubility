@@ -1,26 +1,40 @@
 /*Este algoritmo emplea el método*
- *de la actividad media y está   *
- *específicamente diseñado para  *
- *   sales 1+1 sin ion común     */
+ *de la fuerza ionica media y    *
+ *está específicamente diseñado  *
+ *para sales 1+1 sin ion común   */
 
 #include <stdio.h>
 #include <math.h>
+#define PRECISION 1e-6 //0.000001 one millionth
+
+long double conc = 1e-2;
+long double kPS = 0e+1;
+long double s_i_ans = 1e-1; //Can be any positive value I think
+
+//noionc recourses until the relative change of s_i
+//becomes lower than what PRECISION dictates.
+void noionc (long double a, long double b, long double c){
+	if ( 1 - (b / pow(10, -0.51*sqrt(c + a)))/c < PRECISION){
+		if (1 - (b / pow(10, -0.51*sqrt(c + a)))/c > -PRECISION) {
+			printf("La solubilidad es de %Le M\n", c);		
+			return;
+		}
+		else {
+			noionc(a, b, b / pow(10, -0.51*sqrt(c + a)));
+		}
+	}
+	else {
+		noionc(a, b, b / pow(10, -0.51*sqrt(c + a)));
+	}
+}
 
 int main (){
 //	double s_i;
-	long double conc = 0.01;
-	long double kPS = 0.0;
-	long double s_i_ans = 0.1; //set to 1,76e-4 if all else fails
-	printf ("Se requiere de dos valores: La concentración actual\n
-		de la solución y la constante de solubilidad termodinámica del soluto.\n");
+	printf ("Se requiere de dos valores: La concentración actual\nde la solución y ");
+	printf ("la constante de solubilidad termodinámica del soluto.\n");
 	scanf ("%Le", &conc);
-	//printf ("%Le\n", conc); //Just debug things
 	scanf ("%Le", &kPS);
-	//printf ("%Le\n", kPS); //Just debug things
 	kPS = sqrt(kPS);
-	for (int i = 0; i < 5; i++){
-		s_i_ans = kPS / pow(10, -0.51*sqrt(s_i_ans + conc));
-	}
-	printf("La solubilidad es de %Le\n", s_i_ans);
+	noionc(conc, kPS, s_i_ans);
 	return 0;
 }
