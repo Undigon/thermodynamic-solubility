@@ -29,12 +29,12 @@ void noionc (long double a, long double b, long double c){
 }
 
 int main (){
-//	double s_i;
 	printf ("Se requiere de dos valores: La concentración actual\nde la solución y ");
 	printf ("la constante de solubilidad termodinámica del soluto.\n");
 	scanf ("%Le", &conc);
 	scanf ("%Le", &kPS);
 	kPS = sqrt(kPS);
+	//Placeholder for future switch to include common-ion effect and more.
 	noionc(conc, kPS, s_i_ans);
 	return 0;
 }
