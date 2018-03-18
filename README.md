@@ -14,4 +14,4 @@ Where:
 ###### Common-ion effect
 This effects add a little bit of complexity but comes from almost the same three equations. It's processed form is as follows:
 
-![This is an image. It's the resolvent for second grade equations where A equals 1 , B equals the solution concentration and C equals Kps divided by ten to the minus 1,02 multiplied by the square root of the addition between the previous solubility and the solution's concentration](https://i.imgur.com/xb2S6hF.png)
+![This is an image. It's the resolvent for second grade equations where A equals 1 , B equals the solution concentration and C equals Kps divided by ten to the minus 1,02 multiplied by the square root of the addition between the previous solubility and the solution's concentration](https://i.imgur.com/94ouT7g.png)
