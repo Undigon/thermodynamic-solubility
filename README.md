@@ -6,7 +6,7 @@ A software implementation of a couple of my easily iterable solubility equations
 ##### On GNU/Linux
 
 You probably have the GNU C Compiler at your disposal.
-Open a console, navigate to the source folder and execute 
+Open a terminal, navigate to the source folder and execute 
 
 `gcc -o solubility solubilidad_noionc.c -lm`
 
