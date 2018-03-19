@@ -1,11 +1,28 @@
 # thermodynamic-solubility
 A software implementation of a couple of my easily iterable solubility equations.
 
+## Compiling
+
+##### On GNU/Linux
+
+You probably have the GNU C Compiler at your disposal.
+Open a console, navigate to the source folder and execute 
+
+`gcc -o solubility solubilidad_noionc.c -lm`
+
+from where the source code resides.
+
+##### On Microsoft Windows
+
+I have used code::blocks some time ago to start learning C. Use what works best for you as it shouldn't matter at this level.
+
+## Mathematics
+
 ###### My first equation
 It's very specific. It's to be used for water 1+1 cation-anion solutions and 1+1 cation-anion solute without the common ion effect. I made it for quick calculator usage requiring just the ans function.
 Using a fuller expression of the... median activity method was it called? might be more useful.
 
-![1+1 solution 1+1 solute](https://i.imgur.com/mLRAyL4.png)
+![1+1 solution 1+1 solute](https://i.imgur.com/Yo7royo.png)
 
 Where:
 * *C* stands for solution concentration in Molarity
